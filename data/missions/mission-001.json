@@ -1,0 +1,191 @@
+{
+  "id": "001",
+  "title": "Python Introduction",
+  "banglaTitle": "পাইথন পরিচিতি",
+  "banglaSubtitle": "প্রোগ্রামিং শুরুর গল্প",
+  "cognitiveLoadEstimate": {
+    "readingLevel": 2,
+    "newConceptCount": 3,
+    "practiceComplexity": 1,
+    "estimatedTotalMinutes": 25
+  },
+  "curiosity": {
+    "didYouKnow": "Python was named after the British comedy group Monty Python, not the snake!",
+    "realWorldApplication": "NASA uses Python to analyze data from the James Webb Space Telescope.",
+    "aiApplication": "Python is the primary language used to build AI models like ChatGPT.",
+    "eeeApplication": "EEE engineers use Python to simulate circuits and analyze sensor data.",
+    "historicalFact": "Guido van Rossum created Python in 1989 as a hobby project during his Christmas holidays.",
+    "nextMissionPreview": "In the next mission, we will create our first variables."
+  },
+  "steps": [
+    {
+      "type": "intro",
+      "missionNumber": "001",
+      "title": "Welcome to NEXUS Academy",
+      "banglaTitle": "নেক্সাস একাডেমিতে স্বাগতম",
+      "tagline": "কীভাবে একজন প্রোগ্রামার চিন্তা করে?",
+      "description": "প্রোগ্রামিং মানে শুধু কোড লেখা নয়, এটি হচ্ছে সমস্যা সমাধানের একটি উপায়। এই মিশনে আমরা শিখব কীভাবে কম্পিউটারের মতো চিন্তা করতে হয়।",
+      "learningObjectives": [
+        "কম্পিউটার কীভাবে কাজ করে তা বোঝা",
+        "অ্যালগরিদম কী তা জানা",
+        "কোড লেখার আগে চিন্তা করার অভ্যাস তৈরি করা"
+      ],
+      "estimatedMinutes": 2
+    },
+    {
+      "type": "story",
+      "title": "শেফ এবং রেসিপি",
+      "setting": "একটি ব্যস্ত রেস্তোরাঁর রান্নাঘর",
+      "content": "মনে করো একজন শেফ রান্নাঘরে কাজ করছেন। তার কাছে কিছু উপাদান (ডেটা) এবং একটি রেসিপি (কোড) আছে। শেফ ধাপে ধাপে রেসিপি অনুসরণ করে একটি সুস্বাদু খাবার তৈরি করেন।",
+      "moral": "একটি প্রোগ্রাম হলো কম্পিউটারের জন্য একটি রেসিপি।"
+    },
+    {
+      "type": "analogy",
+      "title": "কোড হলো একটি কারখানা",
+      "realWorld": {
+        "label": "কারখানা",
+        "description": "কাঁচামাল ঢোকে, প্রসেস হয়, এবং নতুন পণ্য তৈরি হয়।",
+        "icon": "Factory"
+      },
+      "pythonConcept": {
+        "label": "প্রোগ্রাম",
+        "description": "ইনপুট নেয়, লজিক দিয়ে প্রসেস করে, এবং আউটপুট দেয়।",
+        "icon": "TerminalSquare"
+      },
+      "connection": "Input -> Process -> Output",
+      "deeperInsight": "কারখানায় যেমন নির্দিষ্ট নিয়ম থাকে, কোডেও সিনট্যাক্স মানতে হয়।"
+    },
+    {
+      "type": "concept",
+      "title": "পাইথন কী?",
+      "content": "পাইথন একটি হাই-লেভেল প্রোগ্রামিং ভাষা। 'হাই-লেভেল' মানে এটি দেখতে অনেকটা সাধারণ ইংরেজির মতো, তাই মানুষের জন্য এটি পড়া এবং লেখা অনেক সহজ।",
+      "keyPoints": [
+        "পড়তে সহজ (Readability)",
+        "বিগিনার ফ্রেন্ডলি",
+        "এআই এবং ডেটা সায়েন্সে সবচেয়ে জনপ্রিয়"
+      ],
+      "whyCallout": "কেন আমরা সি (C) বা জাভা (Java) দিয়ে শুরু করছি না? কারণ পাইথনের সিনট্যাক্স অনেক সহজ, তাই লজিকের দিকে বেশি ফোকাস করা যায়।",
+      "whenToUse": "ডেটা অ্যানালাইসিস, এআই, ওয়েব ব্যাকএন্ড, অটোমেশন।",
+      "whenNotToUse": "হাই-পারফরম্যান্স গেম ইঞ্জিন বা লো-লেভেল হার্ডওয়্যার ড্রাইভার বানানোর ক্ষেত্রে।"
+    },
+    {
+      "type": "visualization",
+      "title": "পাইথন কীভাবে কাজ করে",
+      "description": "তুমি কোড লেখো -> পাইথন ইন্টারপ্রেটার সেটি অনুবাদ করে -> কম্পিউটার কাজ করে।",
+      "visualizationType": "execution_flow",
+      "data": {
+        "steps": [
+          "Source Code",
+          "Interpreter",
+          "Machine Code",
+          "Execution"
+        ]
+      },
+      "caption": "পাইথন হলো তোমার এবং কম্পিউটারের মাঝখানে একজন দোভাষী (Translator)।"
+    },
+    {
+      "type": "code_example",
+      "title": "তোমার প্রথম কোড",
+      "explanation": "কম্পিউটারকে স্ক্রিনে কিছু দেখাতে হলে আমরা `print()` ফাংশন ব্যবহার করি।",
+      "language": "python",
+      "code": "print(\"Hello, World!\")",
+      "output": "Hello, World!",
+      "annotations": [
+        {
+          "lineNumber": 1,
+          "explanation": "print() একটি বিল্ট-ইন ফাংশন যা আউটপুট দেখায়।"
+        }
+      ],
+      "postExplanation": "লক্ষ্য করো, লেখার দুই পাশে ডাবল কোটেশন (\") দেওয়া হয়েছে।"
+    },
+    {
+      "type": "eee_example",
+      "title": "EEE পার্সপেক্টিভ: সিগন্যাল",
+      "context": "আমরা যখন আরডুইনো বা মাইক্রোকন্ট্রোলারে কোড লিখি, তখন আমরা পিন হাই (5V) বা লো (0V) করি।",
+      "hardware": "Arduino Uno (MicroPython)",
+      "domain": "arduino",
+      "code": "led.value(1)",
+      "output": "LED ON",
+      "explanation": "এখানে led.value(1) মানে আমরা ৫ ভোল্ট আউটপুট দিচ্ছি।",
+      "realDeviceNote": "বাস্তব সার্কিটে একটি রেজিস্টর ব্যবহার করতে ভুলবে না!"
+    },
+    {
+      "type": "ai_example",
+      "title": "AI পার্সপেক্টিভ: লার্নিং",
+      "context": "এআই মডেল কীভাবে কাজ করে? তারা ডেটা থেকে প্যাটার্ন খোঁজে।",
+      "aiDomain": "machine_learning",
+      "code": "model.predict(new_data)",
+      "output": "Prediction Result",
+      "explanation": "Python এর সহজ লাইব্রেরিগুলো AI এর জটিল কাজকে সহজ করে দেয়।"
+    },
+    {
+      "type": "practice",
+      "title": "এখন তুমি চেষ্টা করো",
+      "prompt": "একটি প্রোগ্রাম লেখো যা তোমার নাম প্রিন্ট করবে।",
+      "hints": [
+        "print() ফাংশন ব্যবহার করো।",
+        "তোমার নাম কোটেশনের (\" \") ভেতরে লেখো।"
+      ],
+      "expectedOutput": "Your Name",
+      "solution": "print(\"Your Name\")",
+      "solutionExplanation": "print() এর ভেতরে স্ট্রিং দিলে তা স্ক্রিনে দেখায়।"
+    },
+    {
+      "type": "quiz",
+      "title": "জ্ঞান যাচাই",
+      "instructions": "সঠিক উত্তরটি নির্বাচন করো।",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "q1",
+          "questionType": "multiple_choice",
+          "question": "পাইথন একটি হাই-লেভেল ভাষা বলতে কী বোঝায়?",
+          "difficulty": "easy",
+          "options": [
+            "এটি অনেক উঁচুতে কাজ করে",
+            "এটি মানুষের পড়ার মতো সহজ",
+            "এটি খুব দ্রুত চলে",
+            "এটি শুধুমাত্র এআই এর জন্য"
+          ],
+          "correctOptionIndex": 1,
+          "explanation": "হাই-লেভেল ভাষা সাধারণ ইংরেজি শব্দের মতো হয়, যা মানুষের জন্য বোঝা সহজ।"
+        }
+      ]
+    },
+    {
+      "type": "debug_challenge",
+      "title": "বাগ খোঁজো!",
+      "scenario": "তোমার এক বন্ধু নিচের কোডটি লিখেছে, কিন্তু এটি কাজ করছে না।",
+      "buggyCode": "print(Hello, World!)",
+      "errorMessage": "SyntaxError: invalid syntax",
+      "bugLine": 1,
+      "bugType": "syntax",
+      "hints": [
+        "টেক্সট প্রিন্ট করার একটি নিয়ম আছে।",
+        "শব্দের দুই পাশে কিছু একটা দিতে হয়।"
+      ],
+      "fixedCode": "print(\"Hello, World!\")",
+      "explanation": "টেক্সট (স্ট্রিং) সবসময় কোটেশনের (Quote) ভেতরে রাখতে হয়।"
+    },
+    {
+      "type": "reflection",
+      "title": "নিজেকে প্রশ্ন করো",
+      "instruction": "নিচের প্রশ্নগুলো নিয়ে ভাবো (এবং মনে মনে উত্তর দাও):",
+      "prompts": [
+        "আজ তুমি নতুন কী শিখলে?",
+        "কম্পিউটারকে নির্দেশ দেওয়ার সময় কেন এত নিখুঁত হতে হয়?",
+        "পাইথন ছাড়া অন্য কোনো ভাষার নাম কি তুমি জানো?"
+      ]
+    },
+    {
+      "type": "mission_complete",
+      "title": "অভিনন্দন!",
+      "summary": "তুমি প্রোগ্রামিংয়ের বেসিক মাইন্ডসেট বুঝতে পেরেছ।",
+      "keyLearnings": [
+        "প্রোগ্রাম হলো রেসিপির মতো নির্দেশমালা",
+        "পাইথন পড়তে এবং বুঝতে সহজ",
+        "কম্পিউটারকে সবকিছু নির্দিষ্ট করে বলতে হয়"
+      ]
+    }
+  ]
+}

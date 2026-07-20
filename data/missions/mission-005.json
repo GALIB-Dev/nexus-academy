@@ -1,0 +1,34 @@
+{
+  "id": "005",
+  "title": "Locked Mission 5",
+  "titleBangla": "লক করা মিশন 5",
+  "description": "This mission is currently locked.",
+  "difficulty": "beginner",
+  "estimatedMinutes": 20,
+  "xpReward": 400,
+  "prerequisites": [
+    "mission-004"
+  ],
+  "curiosityBlock": {
+    "didYouKnow": "Placeholder",
+    "realWorldApplication": "Placeholder",
+    "aiApplication": "Placeholder",
+    "eeeApplication": "Placeholder",
+    "historicalFact": "Placeholder",
+    "nextMissionPreview": "Placeholder"
+  },
+  "steps": [
+    {
+      "type": "intro",
+      "missionNumber": "005",
+      "title": "Welcome to Mission 5",
+      "banglaTitle": "মিশন 5-এ স্বাগতম",
+      "tagline": "Coming soon...",
+      "description": "This mission is currently under development. Stay tuned!",
+      "learningObjectives": [
+        "Patience"
+      ],
+      "estimatedMinutes": 1
+    }
+  ]
+}

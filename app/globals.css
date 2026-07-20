@@ -1,0 +1,346 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+ * NEXUS Academy — Global Design System
+ * Source of truth: UI_UX_SYSTEM.md
+ *
+ * Dark theme first. Color system, typography, spacing, and
+ * animation tokens defined as CSS custom properties.
+ * ============================================================ */
+
+/* ============================================================
+ * 1. Color System — Dark Theme (default)
+ * ============================================================ */
+:root {
+  /* Backgrounds */     /* Very Dark Navy */
+  --surface:           hsl(222, 40%, 10%);    /* Slightly Lighter Navy */
+  --surface-elevated:  hsl(222, 35%, 14%);    /* Cards, Panels */
+  --surface-hover:     hsl(222, 30%, 18%);    /* Hover states */
+
+  /* Foreground / Text */    /* Primary text — near white */
+  --foreground-muted:  hsl(215, 20%, 65%);    /* Secondary text */
+  --foreground-faint:  hsl(215, 15%, 45%);    /* Tertiary / disabled */
+
+  /* Borders */
+  --border:           oklch(0.922 0 0);    /* Default border */
+  --border-hover:      hsl(222, 20%, 25%);    /* Hover border */
+
+  /* Brand — Primary (Cyan/Teal accent) */
+  --primary:           oklch(0.205 0 0);    /* Primary accent */
+  --primary-hover:     hsl(190, 95%, 60%);
+  --primary-muted:     hsl(190, 40%, 20%);    /* Backgrounds with accent */
+  --primary-foreground:           oklch(0.985 0 0);    /* Text on primary buttons */
+
+  /* Success */
+  --success:           hsl(142, 71%, 45%);
+  --success-muted:     hsl(142, 30%, 15%);
+
+  /* Warning */
+  --warning:           hsl(38, 92%, 50%);
+  --warning-muted:     hsl(38, 40%, 15%);
+
+  /* Destructive / Error */
+  --destructive:           oklch(0.577 0.245 27.325);
+  --destructive-muted: hsl(0, 40%, 15%);
+
+  /* Info */
+  --info:              hsl(217, 91%, 60%);
+  --info-muted:        hsl(217, 40%, 15%);
+
+  /* XP / Gamification accent */
+  --xp:                hsl(48, 96%, 53%);     /* Gold for XP */
+  --xp-muted:          hsl(48, 40%, 15%);
+
+  /* Level accent */
+  --level:             hsl(270, 76%, 60%);    /* Purple for levels */
+  --level-muted:       hsl(270, 30%, 15%);
+
+  /* Sidebar */
+  --sidebar-bg:        hsl(222, 47%, 5%);
+  --sidebar-hover:     hsl(222, 35%, 12%);
+  --sidebar-active:    hsl(190, 40%, 12%);
+  --sidebar-border:           oklch(0.922 0 0);
+  --sidebar-width:     260px;
+  --sidebar-collapsed: 64px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius:           0.625rem;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 2px 0 hsl(0 0% 0% / 0.3);
+  --shadow:     0 2px 8px 0 hsl(0 0% 0% / 0.3);
+  --shadow-md:  0 4px 16px 0 hsl(0 0% 0% / 0.3);
+  --shadow-lg:  0 8px 32px 0 hsl(0 0% 0% / 0.4);
+
+  /* Transitions */
+  --duration-fast:   100ms;
+  --duration:        200ms;
+  --duration-slow:   300ms;
+  --ease-default:    cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in:         cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:        cubic-bezier(0, 0, 0.2, 1);
+  --ease-spring:     cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* shadcn/ui compatibility tokens */
+  --card:           oklch(1 0 0);
+  --card-foreground:           oklch(0.145 0 0);
+  --popover:           oklch(1 0 0);
+  --popover-foreground:           oklch(0.145 0 0);
+  --muted:           oklch(0.97 0 0);
+  --muted-foreground:           oklch(0.556 0 0);
+  --accent:           oklch(0.97 0 0);
+  --accent-foreground:           oklch(0.205 0 0);
+  --ring:           oklch(0.708 0 0);
+  --input:           oklch(0.922 0 0);
+  --background:           oklch(1 0 0);
+  --foreground:           oklch(0.145 0 0);
+  --secondary:           oklch(0.97 0 0);
+  --secondary-foreground:           oklch(0.205 0 0);
+  --chart-1:           oklch(0.87 0 0);
+  --chart-2:           oklch(0.556 0 0);
+  --chart-3:           oklch(0.439 0 0);
+  --chart-4:           oklch(0.371 0 0);
+  --chart-5:           oklch(0.269 0 0);
+  --sidebar:           oklch(0.985 0 0);
+  --sidebar-foreground:           oklch(0.145 0 0);
+  --sidebar-primary:           oklch(0.205 0 0);
+  --sidebar-primary-foreground:           oklch(0.985 0 0);
+  --sidebar-accent:           oklch(0.97 0 0);
+  --sidebar-accent-foreground:           oklch(0.205 0 0);
+  --sidebar-ring:           oklch(0.708 0 0);
+}
+
+/* ============================================================
+ * 2. Tailwind v4 Theme Tokens
+ * ============================================================ */
+@theme inline {
+  --color-background:       var(--background);
+  --color-foreground:        var(--foreground);
+  --color-foreground-muted:  var(--foreground-muted);
+  --color-foreground-faint:  var(--foreground-faint);
+
+  --color-surface:           var(--surface);
+  --color-surface-elevated:  var(--surface-elevated);
+  --color-surface-hover:     var(--surface-hover);
+
+  --color-border:            var(--border);
+  --color-border-hover:      var(--border-hover);
+
+  --color-primary:           var(--primary);
+  --color-primary-hover:     var(--primary-hover);
+  --color-primary-muted:     var(--primary-muted);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-success:           var(--success);
+  --color-success-muted:     var(--success-muted);
+  --color-warning:           var(--warning);
+  --color-warning-muted:     var(--warning-muted);
+  --color-destructive:       var(--destructive);
+  --color-destructive-muted: var(--destructive-muted);
+  --color-info:              var(--info);
+  --color-info-muted:        var(--info-muted);
+  --color-xp:                var(--xp);
+  --color-xp-muted:          var(--xp-muted);
+  --color-level:             var(--level);
+  --color-level-muted:       var(--level-muted);
+
+  --color-sidebar-bg:        var(--sidebar-bg);
+  --color-sidebar-hover:     var(--sidebar-hover);
+  --color-sidebar-active:    var(--sidebar-active);
+  --color-sidebar-border:    var(--sidebar-border);
+
+  --color-card:              var(--card);
+  --color-card-foreground:   var(--card-foreground);
+  --color-popover:           var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted:             var(--muted);
+  --color-muted-foreground:  var(--muted-foreground);
+  --color-accent:            var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring:              var(--ring);
+  --color-input:             var(--input);
+
+  --radius-sm:  var(--radius-sm);
+  --radius-md:  var(--radius-md);
+  --radius-lg:  var(--radius-lg);
+  --radius-xl:  var(--radius-xl);
+
+  --font-sans:           var(--font-sans);
+  --font-mono:     var(--font-jetbrains-mono);
+  --font-bangla:   var(--font-noto-sans-bengali);
+  --font-bangla-ui: var(--font-hind-siliguri);
+  --font-heading:           var(--font-sans);
+  --color-sidebar-ring:           var(--sidebar-ring);
+  --color-sidebar-accent-foreground:           var(--sidebar-accent-foreground);
+  --color-sidebar-accent:           var(--sidebar-accent);
+  --color-sidebar-primary-foreground:           var(--sidebar-primary-foreground);
+  --color-sidebar-primary:           var(--sidebar-primary);
+  --color-sidebar-foreground:           var(--sidebar-foreground);
+  --color-sidebar:           var(--sidebar);
+  --color-chart-5:           var(--chart-5);
+  --color-chart-4:           var(--chart-4);
+  --color-chart-3:           var(--chart-3);
+  --color-chart-2:           var(--chart-2);
+  --color-chart-1:           var(--chart-1);
+  --color-secondary-foreground:           var(--secondary-foreground);
+  --color-secondary:           var(--secondary);
+  --radius-2xl:           calc(var(--radius) * 1.8);
+  --radius-3xl:           calc(var(--radius) * 2.2);
+  --radius-4xl:           calc(var(--radius) * 2.6);
+}
+
+/* ============================================================
+ * 3. Base Styles
+ * ============================================================ */
+* {
+  border-color: var(--border);
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Bangla body text — used via className="font-bangla" */
+.font-bangla {
+  font-family: var(--font-bangla, 'Noto Sans Bengali', sans-serif);
+}
+
+/* Bangla UI labels — used via className="font-bangla-ui" */
+.font-bangla-ui {
+  font-family: var(--font-bangla-ui, 'Hind Siliguri', sans-serif);
+}
+
+/* ============================================================
+ * 4. Scrollbar Styling (dark, minimal)
+ * ============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(222, 20%, 22%);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(222, 20%, 30%);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(222, 20%, 22%) transparent;
+}
+
+/* ============================================================
+ * 5. Focus Ring — consistent accessible focus style
+ * ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================================
+ * 6. Selection
+ * ============================================================ */
+::selection {
+  background: hsl(190, 95%, 50%, 0.3);
+  color: var(--foreground);
+}
+
+/* ============================================================
+ * 7. Utility Classes
+ * ============================================================ */
+
+/* Glass effect for cards (used sparingly per UI_UX_SYSTEM.md) */
+.glass {
+  background: hsl(222, 40%, 10%, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid hsl(222, 20%, 18%, 0.5);
+}
+
+/* Code blocks */
+.code-block {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  tab-size: 4;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.dark {
+  --background:           oklch(0.145 0 0);
+  --foreground:           oklch(0.985 0 0);
+  --card:           oklch(0.205 0 0);
+  --card-foreground:           oklch(0.985 0 0);
+  --popover:           oklch(0.205 0 0);
+  --popover-foreground:           oklch(0.985 0 0);
+  --primary:           oklch(0.922 0 0);
+  --primary-foreground:           oklch(0.205 0 0);
+  --secondary:           oklch(0.269 0 0);
+  --secondary-foreground:           oklch(0.985 0 0);
+  --muted:           oklch(0.269 0 0);
+  --muted-foreground:           oklch(0.708 0 0);
+  --accent:           oklch(0.269 0 0);
+  --accent-foreground:           oklch(0.985 0 0);
+  --destructive:           oklch(0.704 0.191 22.216);
+  --border:           oklch(1 0 0 / 10%);
+  --input:           oklch(1 0 0 / 15%);
+  --ring:           oklch(0.556 0 0);
+  --chart-1:           oklch(0.87 0 0);
+  --chart-2:           oklch(0.556 0 0);
+  --chart-3:           oklch(0.439 0 0);
+  --chart-4:           oklch(0.371 0 0);
+  --chart-5:           oklch(0.269 0 0);
+  --sidebar:           oklch(0.205 0 0);
+  --sidebar-foreground:           oklch(0.985 0 0);
+  --sidebar-primary:           oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground:           oklch(0.985 0 0);
+  --sidebar-accent:           oklch(0.269 0 0);
+  --sidebar-accent-foreground:           oklch(0.985 0 0);
+  --sidebar-border:           oklch(1 0 0 / 10%);
+  --sidebar-ring:           oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}

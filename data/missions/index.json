@@ -1,0 +1,19 @@
+[
+  {
+    "id": "001",
+    "title": "Python Introduction",
+    "banglaTitle": "পাইথন পরিচিতি",
+    "banglaSubtitle": "প্রোগ্রামিং শুরুর গল্প",
+    "description": "Learn what Python is, its history, and why it matters for AI and EEE",
+    "status": "unlocked",
+    "estimatedMinutes": 25,
+    "difficulty": "beginner",
+    "knowledgeGraph": {
+      "prerequisiteIds": [],
+      "enablesIds": ["002"],
+      "relatedIds": [],
+      "topicSlug": "python_introduction"
+    },
+    "tags": ["python", "history", "introduction", "guido"]
+  }
+]

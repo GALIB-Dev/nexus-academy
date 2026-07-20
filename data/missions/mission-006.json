@@ -1,0 +1,34 @@
+{
+  "id": "006",
+  "title": "Locked Mission 6",
+  "titleBangla": "লক করা মিশন 6",
+  "description": "This mission is currently locked.",
+  "difficulty": "beginner",
+  "estimatedMinutes": 20,
+  "xpReward": 400,
+  "prerequisites": [
+    "mission-005"
+  ],
+  "curiosityBlock": {
+    "didYouKnow": "Placeholder",
+    "realWorldApplication": "Placeholder",
+    "aiApplication": "Placeholder",
+    "eeeApplication": "Placeholder",
+    "historicalFact": "Placeholder",
+    "nextMissionPreview": "Placeholder"
+  },
+  "steps": [
+    {
+      "type": "intro",
+      "missionNumber": "006",
+      "title": "Welcome to Mission 6",
+      "banglaTitle": "মিশন 6-এ স্বাগতম",
+      "tagline": "Coming soon...",
+      "description": "This mission is currently under development. Stay tuned!",
+      "learningObjectives": [
+        "Patience"
+      ],
+      "estimatedMinutes": 1
+    }
+  ]
+}

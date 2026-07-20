@@ -1,0 +1,34 @@
+{
+  "id": "007",
+  "title": "Locked Mission 7",
+  "titleBangla": "লক করা মিশন 7",
+  "description": "This mission is currently locked.",
+  "difficulty": "beginner",
+  "estimatedMinutes": 20,
+  "xpReward": 400,
+  "prerequisites": [
+    "mission-006"
+  ],
+  "curiosityBlock": {
+    "didYouKnow": "Placeholder",
+    "realWorldApplication": "Placeholder",
+    "aiApplication": "Placeholder",
+    "eeeApplication": "Placeholder",
+    "historicalFact": "Placeholder",
+    "nextMissionPreview": "Placeholder"
+  },
+  "steps": [
+    {
+      "type": "intro",
+      "missionNumber": "007",
+      "title": "Welcome to Mission 7",
+      "banglaTitle": "মিশন 7-এ স্বাগতম",
+      "tagline": "Coming soon...",
+      "description": "This mission is currently under development. Stay tuned!",
+      "learningObjectives": [
+        "Patience"
+      ],
+      "estimatedMinutes": 1
+    }
+  ]
+}

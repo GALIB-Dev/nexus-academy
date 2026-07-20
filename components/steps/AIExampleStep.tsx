@@ -1,0 +1,27 @@
+import type { AIExampleStep } from '@/types/mission.types';
+import { BrainCircuit } from 'lucide-react';
+export function AIExampleStepComponent({ step }: { step: AIExampleStep }) {
+  return (
+    <div className="w-full max-w-2xl space-y-8 animate-in slide-in-from-bottom-4 duration-700">
+      <div className="flex items-center gap-3">
+        <div className="p-3 bg-indigo-500/10 rounded-xl border border-indigo-500/20">
+          <BrainCircuit className="w-6 h-6 text-indigo-400" />
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold font-bangla-ui text-foreground">{step.title}</h2>
+          <span className="text-xs font-semibold text-indigo-400 uppercase tracking-wider">{step.aiDomain.replace('_', ' ')}</span>
+        </div>
+      </div>
+
+      <p className="font-bangla text-muted-foreground">{step.context}</p>
+      
+      <div className="rounded-xl overflow-hidden border border-border font-mono text-sm shadow-md">
+        <div className="bg-[#0d1117] p-6 text-purple-300"><pre><code>{step.code}</code></pre></div>
+        <div className="bg-[#05070a] p-4 text-green-400 border-t border-border/50">{step.output}</div>
+      </div>
+
+      <p className="font-bangla text-foreground font-medium p-4 bg-surface rounded-lg border border-border">{step.explanation}</p>
+      {step.realWorldModel && <p className="text-sm font-bangla text-indigo-400/80 italic border-l-2 border-indigo-500 pl-4">{step.realWorldModel}</p>}
+    </div>
+  );
+}
